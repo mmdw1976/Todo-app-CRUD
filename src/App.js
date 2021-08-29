@@ -20,6 +20,7 @@ const DUMMY = [
 const App = () => {
     const [todos, setTodos] = useState(DUMMY);
 
+    // create
     const addTodo = (todo) => {
         setTodos((prevState) => {
             return [...prevState, 
@@ -31,6 +32,7 @@ const App = () => {
         })
     }
 
+    // update
     const toggleCheckbox = (id) => {
         const toggle = todos.map(todo => {
             if(todo.id === id) {
@@ -41,6 +43,7 @@ const App = () => {
         setTodos(toggle);
     }
 
+    // destroy
     const deleteTodo = (id) => {
         setTodos((prevState) => {
             return prevState.filter(todo => todo.id !== id)

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Todo.css';
+
 const TodoList = ({todos, toggleCheckbox, deleteTodo}) => {
     return ( 
         <table>
